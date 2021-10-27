@@ -4,10 +4,9 @@ environment_variables:
     HUGO_VERSION: "0.76.2"
   
 phases:
-  runtime-versions:
-    docker: 18
-    
   build:
+    runtime-versions:
+         docker: 18
     commands:
         - rm -rf public
         - hugo
