@@ -10,8 +10,8 @@ phases:
             docker: 18
     commands:
         - cd /tmp
-        - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-        - tar -xvf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+        - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+        - tar -xvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
         - mv hugo /usr/bin/hugo
         - cd -
         - rm -rf /tmp/*
@@ -27,5 +27,5 @@ phases:
          
   post-build:
      commands:
-        - echo Build complete - Joel - Hugo demo - 'date'
+        - echo "Build complete - Joel - Hugo demo - date"
         
