@@ -22,11 +22,11 @@ phases:
         - hugo
         - aws s3 sync public/ s3://s3-hugo/ --region us-east-1 --delete
               
-  pre-build:
+  pre_build:
      commands:
         - echo pre-build complete - Joel - Hugo 
         
-  post-build:
+  post_build:
      commands:
         - echo Build completed - Joel - Hugo demo
         
