@@ -22,6 +22,8 @@ phases:
         - aws s3 sync public/ s3://s3-hugo/ --region us-east-1 --delete
         
   pre-build:
+    commands:
+     - ls -las
   
   post-build:
      commands:
