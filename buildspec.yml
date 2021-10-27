@@ -4,14 +4,9 @@ environment_variables:
     HUGO_VERSION: "0.76.2"
   
 phases:
-  build:
-    commands:
-        - rm -rf public
-        - hugo
-        - aws s3 sync public/ s3://s3-hugo/ --region us-east-1 --delete
-        
+  
   install:
-      runtime-versions:
+    runtime-versions:
          docker: 18
     commands:
         - cd /tmp
@@ -19,7 +14,14 @@ phases:
         - tar -xvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
         - mv hugo /usr/bin/hugo
         - rm -rf /tmp/*hugo*
-        
+        - cd -
+ 
+  build:
+    commands:
+        - rm -rf public
+        - hugo
+        - aws s3 sync public/ s3://s3-hugo/ --region us-east-1 --delete
+              
   pre-build:
      commands:
         - echo pre-build complete - Joel - Hugo 
