@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.5
 
 environment_variables:
  plaintext:
@@ -6,7 +6,7 @@ environment_variables:
   
 phases:
   runtime-versions:
-    docker: 19
+    docker: 25
   build:
     commands:
         - rm -rf public
