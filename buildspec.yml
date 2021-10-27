@@ -1,4 +1,4 @@
-version: 0.5
+version: 0.2
 
 environment_variables:
  plaintext:
@@ -6,7 +6,8 @@ environment_variables:
   
 phases:
   runtime-versions:
-    docker: 25
+    docker: 18
+    
   build:
     commands:
         - rm -rf public
@@ -23,9 +24,9 @@ phases:
         
   pre-build:
     commands:
-        - ls -las
+        - echo Nada que hacer
        
   post-build:
      commands:
-        - echo "Build complete - Joel - Hugo demo - date"
+        - echo Build complete - Joel - Hugo demo
         
