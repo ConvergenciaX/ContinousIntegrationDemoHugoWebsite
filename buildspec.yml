@@ -19,14 +19,12 @@ phases:
         - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
         - tar -xvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
         - mv hugo /usr/bin/hugo
-        - cd -
-        - rm -rf /tmp/*
+        - rm -rf /tmp/*hugo*
         
   pre-build:
     commands:
         - ls -las
-
-         
+       
   post-build:
      commands:
         - echo "Build complete - Joel - Hugo demo - date"
