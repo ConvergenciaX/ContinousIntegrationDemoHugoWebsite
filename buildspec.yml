@@ -20,7 +20,10 @@ phases:
         - rm -rf public
         - hugo
         - aws s3 sync public/ s3://s3-hugo/ --region us-east-1 --delete
+        
+  pre-build:
+  
   post-build:
-    commands:
+     commands:
         - echo Build complete - Joel - Hugo demo - 'date'
         
